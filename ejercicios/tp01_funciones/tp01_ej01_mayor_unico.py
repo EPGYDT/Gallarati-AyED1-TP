@@ -1,6 +1,14 @@
+#TP 1
+
 #EJ 1
 def comparador(num1, num2, num3):
-    "Compara los numeros y devuelve el mayor"
+    """
+    Compara los numeros y devuelve el mayor.
+    Pre: Recibe tres enteros positivos.
+    Post: Devuelve el mayor unico, o un -1 en caso de no haber uno.
+    """
+    assert isinstance(num1, int) and isinstance(num2, int) and isinstance(num3, int), "Los numeros deben ser enteros."
+    assert num1 > 0 and num2 > 0 and num3 > 0, "Los numeros deben ser positivos"
     if num1 > num2:
 
         if num1 > num3:
@@ -54,5 +62,3 @@ if mayor == -1:
 
 else:
     print(f"el numero mayor fue: {mayor}") 
-
-
