@@ -1,20 +1,3 @@
-"""
-1. Desarrollar cada una de las siguientes funciones y escribir un programa que permita
-verificar su funcionamiento imprimiendo la lista luego de invocar a cada función:
-
-a. Cargar una lista con números al azar de cuatro dígitos. La cantidad de elementos
- también será un número al azar de dos dígitos.
-
-b. Calcular y devolver el producto de todos los elementos de la lista anterior.
-
-c. Eliminar todas las apariciones de un valor en la lista anterior. El valor a eliminar
-se ingresa desde el teclado y la función lo recibe como parámetro. No utilizar
-listas auxiliares.
-
-d. Determinar si el contenido de una lista cualquiera es capicúa, sin usar listas
-auxiliares. Un ejemplo de lista capicúa es [50, 17, 91, 17, 50]
-"""
-
 from random import randint
 
 #Funcion a
@@ -50,9 +33,11 @@ def eliminar_valor(valor: int, lista: list) -> list:
     Pre: Recibe un valor para eliminar, que debe ser un entero, y una lista.
     Post: Devuelve la lista sin el valor.
     """
-    for elemento in lista:
-        if elemento == valor:
-            lista.remove(elemento)
+    while True:
+            if valor in lista:
+                lista.remove(valor)
+            else:
+                break
 
     return lista
 
@@ -73,10 +58,10 @@ def capicua(lista: list) -> bool:
 lista = []
 
 print(cargar_lista_random(lista))
-print(f"/n/n")
-print(calcular_productos(lista))
-print(f"/n/n")
+print(f"\n\n")
+print(f"El producto de todos los elementos de la lista es: {calcular_productos(lista)}")
+print(f"\n\n")
 valor = int(input("Ingrese un valor para eliminarlo de la lista: "))
-print(f"el producto de todos los elementos de la lista es: {eliminar_valor(valor, lista)}")
-print(f"/n/n")
+print(f"Lista sin el valor seleccionado: {eliminar_valor(valor, lista)}")
+print(f"\n")
 print(capicua(lista))

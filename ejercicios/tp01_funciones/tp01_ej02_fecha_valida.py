@@ -10,6 +10,7 @@ def verif_dia(dia: int, mes: int, ano: int) -> bool:
     assert dia > 0 and mes > 0 and ano > 0, "Los numeros de la fecha deben ser positivos."
 
     biciesto = verif_biciesto(ano)
+    
     if mes > 0 and dia > 0 and ano > 0:
         if mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12:
             if dia <= 31 and dia > 0:

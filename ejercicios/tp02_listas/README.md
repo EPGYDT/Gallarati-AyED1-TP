@@ -7,21 +7,18 @@ Este directorio contiene los ejercicios correspondientes a este trabajo práctic
 
 ## Archivos incluidos
 
-No se encontraron archivos de ejercicios.
-
-Los archivos deben nombrarse con el formato:
-
-```text
-tp01_ej01_descripcion.py
-tp01_ej02_descripcion.py
-```
+| Nº | Archivo | Ejecución |
+|---:|---|---|
+| 1 | `tp02_ej01_funciones_listas.py` | `python tp02_ej01_funciones_listas.py` |
+| 2 | `tp02_ej02_funciones_listas_2.py` | `python tp02_ej02_funciones_listas_2.py` |
+| 3 | `tp02_ej03.py` | `python tp02_ej03.py` |
 
 ## Ejecutar un ejercicio
 
 Desde este directorio:
 
 ```bash
-python tp01_ej01_nombre_del_ejercicio.py
+python tp02_ej01_funciones_listas.py
 ```
 
 ## Ejecutar el menú

@@ -39,26 +39,32 @@ def comparador(num1, num2, num3):
         else:
             return -1
 
-a = 0
-b = 0
-c = 0
+
+
+def main():
+    a = 0
+    b = 0
+    c = 0
 
 
 
-while a < 1:
-    a = int(input("ingrese el primer numero: "))
+    while a < 1:
+        a = int(input("ingrese el primer numero: "))
 
-while b < 1:
-    b = int(input("ingrese el segundo numero: "))
+    while b < 1:
+        b = int(input("ingrese el segundo numero: "))
 
-while c < 1:
-    c = int(input("ingrese el tercer numero: "))
+    while c < 1:
+        c = int(input("ingrese el tercer numero: "))
 
 
-mayor = comparador(a, b, c)
+    mayor = comparador(a, b, c)
 
-if mayor == -1:
-    print("nu hubo un solo numero mayor")
+    if mayor == -1:
+        print("nu hubo un solo numero mayor")
 
-else:
-    print(f"el numero mayor fue: {mayor}") 
+    else:
+        print(f"el numero mayor fue: {mayor}") 
+
+
+main()

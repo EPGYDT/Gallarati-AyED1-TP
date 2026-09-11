@@ -53,14 +53,22 @@ def calc_vuelto(costo, pago):
     else:
         print("El dinero no es suficiente para cubrir el gasto de la compra :(")
 
-costo = 0
-pago = 0
 
 
-while costo < 10:
+
+while True:
     costo = int(input("Ingrese el costo de la compra: "))
+    if costo < 10:
+        print("Error, el costo debe ser de 10 o mas.")
+    else:
+        break
 
-while pago <= 0:
+while True:
     pago = int(input("Ingrese el monto que pago el cliente: "))
+    if pago <= 0:
+        print("Error, el pago debe ser mayor a 0.")
+    else:
+        break
+
 
 calc_vuelto(costo, pago)

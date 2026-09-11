@@ -113,12 +113,19 @@ print()
 #Añadir X cantidad de dias:
 print(f"la fecha siguiente es: {diasiguiente(dia, mes, ano)}")
 print(f"\n\n")
+
+
+
+
 cantidad_de_vueltas = int(input("Ingrese la cantidad de dias que quiere añadir a la fecha original: "))
 
 for i in range(cantidad_de_vueltas):
     dia, mes, ano = diasiguiente(dia, mes, ano)
 
 print(dia, mes, ano)
+
+
+
 
 
 #Ver la diferencia de dias entre dos fechas:

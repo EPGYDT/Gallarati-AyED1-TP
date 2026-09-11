@@ -1,4 +1,4 @@
-def calcular_oblongo(numero: int) -> str:
+def calcular_oblongo(numero: int) -> bool:
     """
     Verifica si el numero ingresado es oblongo.
     Pre: Recibe un numero entero positivo.
@@ -21,7 +21,7 @@ print(calcular_oblongo(numero))
 
 
 
-def calcular_triangular(numero: int) -> str:
+def calcular_triangular(numero: int) -> bool:
     """
     Verifica si el numero ingresado es triangular.
     Pre: Recibe un numero entero positivo.
@@ -43,3 +43,8 @@ def calcular_triangular(numero: int) -> str:
 numero = int(input("Ingrese un numero para verificar si es triangular: "))
 
 print(calcular_triangular(numero))
+
+
+numero = int(input("Ingrese un numero para verificar si es oblongo: "))
+
+oblongo = (lambda n: [n ])
