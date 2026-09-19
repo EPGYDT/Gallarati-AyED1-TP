@@ -46,5 +46,3 @@ print(calcular_triangular(numero))
 
 
 numero = int(input("Ingrese un numero para verificar si es oblongo: "))
-
-oblongo = (lambda n: [n ])

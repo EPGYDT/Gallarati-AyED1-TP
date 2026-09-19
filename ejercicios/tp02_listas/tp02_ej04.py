@@ -1,4 +1,9 @@
 def eliminar_elementos(lista: list[int], lista_elim: list[int]):
+    """
+    Elimina de una lista los elementos de otra lista.
+    Pre: Recibe dos listas con enteros.
+    Post: Retorna la primera lista sin los elementos de la segunda lista.
+    """
     print(f"Lista original: {lista}")
     for e in lista:
         if e in lista_elim:
