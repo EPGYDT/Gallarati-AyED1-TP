@@ -1,6 +1,6 @@
 def normalizar(lista: list) -> float:
     """
-    Normaliza todos los elementos de una lista (hace que la summa de todos ellos de 1).
+    Normaliza todos los elementos de una lista (hace que la suma de todos ellos de 1).
     Pre: Recibe una lista con numeros enteros positivos.
     Post: retorna la misma lista con todos sus elementos normalizados.
     """

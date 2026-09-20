@@ -1,13 +1,11 @@
 def intercalar_elementos(lista1: list[int], lista2: list[int]) -> list[int]:
     """
-    Intercala dos listas en una la primerra de ellas.
+    Intercala dos listas en una la primera de ellas.
     Pre: Recibe dos listas con enteros positivos.
     Post: Devuelve la primera lista intercalada con las segunda.
     """
-
     for i, e in enumerate(lista2):
-        lista1.insert(i+1+i, e)
-
+        lista1[(i+i+1):(i+i+1)] = [e]
     return lista1
 
 

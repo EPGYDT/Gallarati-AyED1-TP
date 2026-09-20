@@ -1,4 +1,4 @@
-def eliminar_elementos(lista: list[int], lista_elim: list[int]):
+def eliminar_elementos(lista: list[int], lista_elim: list[int]) -> None:
     """
     Elimina de una lista los elementos de otra lista.
     Pre: Recibe dos listas con enteros.
