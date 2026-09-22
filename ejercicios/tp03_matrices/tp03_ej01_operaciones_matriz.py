@@ -10,7 +10,7 @@ def generar_matriz(n: int) -> list[list[int]]:
     for i in range(n):
         fila = []
         for j in range(n):
-            num = int(input(f"Ingrese el elemento numero {j+1} de la fila {i+1}: "))
+            num = int(input(f"Ingrese el elemento numero {j+1} de la fila numero {i+1}: "))
             fila.append(num)
         matriz.append(fila)
 
