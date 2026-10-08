@@ -75,11 +75,29 @@ def e(n: int)-> list[list[int]]:
 """HASTA ACA ABARCA MI TIEMPO 🥀"""
 
 def f(n: int)-> list[list[int]]:
-    pass
+    matriz = generar_matriz(n)
+    largo = n
+    numeros = 1
+    for i in range(largo):
+        for j in range(1,largo+1):
+            if j <= i+1:
+                matriz[i][-j] = numeros
+                numeros += 1
+
+    return matriz
+
+        
 
 
 def g(n: int)-> list[list[int]]:
-    pass
+    matriz = generar_matriz(n)
+    numeros = [num for num in range(1, n*n+1)]
+    largo = n
+    for i in range(largo):
+        matriz[i][i:-i] = numeros[:largo]
+        numeros.remove(matriz[i][i:-i])
+        for j in range(largo):
+            matriz[i]
 
 
 def h(n: int)-> list[list[int]]:
@@ -91,7 +109,6 @@ def i(n: int)-> list[list[int]]:
 
 
 n = int(input("Ingrese el largo y ancho de la matriz: "))
-matriz = a(n)
 
 print("\nFuncion a:")
 imprimir_matriz(a(n))
@@ -103,3 +120,5 @@ print("\nFuncion d:")
 imprimir_matriz(d(n))
 print("\nFuncion e:")
 imprimir_matriz(e(n))
+print("\nFuncion f:")
+imprimir_matriz(f(n))
