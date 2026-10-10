@@ -169,7 +169,8 @@ def main():
             case "3":
                 butacas_contiguas(matriz)
 
-            case 0:
+            case "0":
+                print("adios!")
                 break
 
             case _:
