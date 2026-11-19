@@ -3,6 +3,15 @@ class NumeroNegativoError(Exception):
 
 
 def ingresar_numero():
+    """
+    Contrato:
+        - Solicita al usuario un numero entero positivo.
+    Pre:
+        - No requiere datos previos.
+    Post:
+        - Devuelve el numero ingresado si es positivo.
+        - Solicita nuevamente el dato cuando el numero no es valido.
+    """
     try:
         numero = int(input("Ingrese un numero: "))
         if numero <= 0:

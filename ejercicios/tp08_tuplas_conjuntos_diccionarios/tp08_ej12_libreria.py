@@ -6,6 +6,14 @@ el ítem más costoso que venden en el comercio.
 """
 
 def imprimir_lista(diccionario):
+    """
+    Contrato:
+        - Imprime una lista de productos y sus precios.
+    Pre:
+        - Recibe un diccionario cuyos valores representan precios.
+    Post:
+        - Imprime los nombres y precios con formato alineado.
+    """
     largo = ""
     for c in diccionario:
         if len(c) > len(largo):
@@ -19,6 +27,15 @@ def imprimir_lista(diccionario):
 
 
 def main():
+    """
+    Contrato:
+        - Permite cargar productos y muestra sus precios actualizados.
+    Pre:
+        - No requiere datos previos.
+    Post:
+        - Solicita productos por teclado, aplica el aumento a los cuadernos
+          e informa el producto mas caro.
+    """
     productos = {}
     while True:
         nombre = input("Ingrese el nombre del producto que quiere añadir (-1 para frenar): ")

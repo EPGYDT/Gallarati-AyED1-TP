@@ -1,19 +1,12 @@
-"""
-Desarrollar las siguientes funciones utilizando tuplas para representar fechas y horarios,
-y luego escribir un programa que las vincule:
-
-a. Ingresar una fecha desde el teclado, verificando que corresponda a una fecha válida.
-
-b. Sumar N días a una fecha.
-
-c. Ingresar un horario desde teclado, verificando que sea correcto.
-
-d. Calcular la diferencia entre dos horarios. Si el primer horario fuera mayor al
-segundo se considerará que el primero corresponde al día anterior.
-En ningún caso la diferencia en horas puede superar las 24 horas.
-"""
-
 def verificar_fecha(dia: int, mes: int, ano: int) -> bool:
+    """
+    Contrato:
+        - Verifica si una fecha formada por dia, mes y ano es valida.
+    Pre:
+        - Recibe tres numeros enteros.
+    Post:
+        - Devuelve True si la fecha existe; False en caso contrario.
+    """
     biciesto = verif_biciesto(ano)
     treinta_y_uno = (1, 3, 5, 7, 8, 10, 12)
     treinta = (4, 6, 9, 11)
@@ -51,9 +44,12 @@ def verificar_fecha(dia: int, mes: int, ano: int) -> bool:
 
 def verif_biciesto(ano: int) -> bool:
     """
-    Verifica si el año es o no biciesto.
-    Pre: El numero debe ser un entero positivo
-    Post: devuelve un booleano en base a si el ano es biciesto o no.
+    Contrato:
+        - Verifica si un ano es biciesto.
+    Pre:
+        - Recibe un numero entero positivo.
+    Post:
+        - Devuelve True si el ano es biciesto; False en caso contrario.
     """
     if ano % 400 == 0:
         return True
@@ -66,6 +62,15 @@ def verif_biciesto(ano: int) -> bool:
 
 
 def sumar_dias(n: int, dia: int, mes: int, ano: int) -> tuple[int, int, int] | None:
+    """
+    Contrato:
+        - Suma una cantidad de dias a una fecha valida.
+    Pre:
+        - Recibe una cantidad entera no negativa y una fecha valida.
+    Post:
+        - Devuelve la fecha resultante como una tupla dia, mes, ano.
+        - Informa si la fecha inicial no es valida.
+    """
     if verificar_fecha(dia, mes, ano) == True:
         biciesto = verif_biciesto(ano)
         treinta_y_uno = (1, 3, 5, 7, 8, 10, 12)
@@ -118,6 +123,15 @@ def sumar_dias(n: int, dia: int, mes: int, ano: int) -> tuple[int, int, int] | N
 
 
 def verificar_horario(horas: int, minutos: int) -> bool:
+    """
+    Contrato:
+        - Verifica si un horario tiene horas y minutos validos.
+    Pre:
+        - Recibe dos numeros enteros.
+    Post:
+        - Devuelve True si el horario es valido; False en caso contrario.
+        - Imprime un mensaje informativo sobre la validez.
+    """
     if horas > 23 or horas < 0 or minutos > 59 or minutos < 0:
         print("Error, horario, invalido.")
         return False
@@ -128,6 +142,14 @@ def verificar_horario(horas: int, minutos: int) -> bool:
 
 
 def calcular_diferencia_horarios(horas: int, minutos: int, horas2: int, minutos2: int):
+    """
+    Contrato:
+        - Calcula la diferencia entre dos horarios validos.
+    Pre:
+        - Recibe dos pares de enteros que representan horas y minutos.
+    Post:
+        - Devuelve una tupla con los minutos y horas de diferencia.
+    """
     if horas > horas2:
         dif_horas = horas - horas2
         dif_minutos = minutos - minutos2

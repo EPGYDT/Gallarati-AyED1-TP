@@ -1,4 +1,12 @@
 def romanizar_numeros(numero: int)-> str:
+    """
+    Contrato:
+        - Convierte un numero entero en su representacion romana.
+    Pre:
+        - Recibe un numero entero entre 1 y 3999.
+    Post:
+        - Imprime la representacion romana correspondiente.
+    """
 
     lista = []
 

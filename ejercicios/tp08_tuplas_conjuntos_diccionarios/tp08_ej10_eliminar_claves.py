@@ -1,4 +1,13 @@
 def eliminarclaves(diccionario: dict, lista: list):
+    """
+    Contrato:
+        - Elimina del diccionario las claves incluidas en una lista.
+    Pre:
+        - Recibe un diccionario y una lista de claves.
+    Post:
+        - Modifica el diccionario eliminando las claves existentes.
+        - Imprime el diccionario resultante y la cantidad eliminada.
+    """
     eliminados = 0
     for e in lista:
         try:

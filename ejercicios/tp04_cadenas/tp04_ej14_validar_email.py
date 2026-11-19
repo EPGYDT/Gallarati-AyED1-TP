@@ -2,6 +2,14 @@ import re
 
 
 def validar_correo(texto):
+    """
+    Contrato:
+        - Verifica si una cadena tiene el formato de un correo electronico aceptado.
+    Pre:
+        - Recibe una cadena de texto.
+    Post:
+        - Devuelve True si el texto cumple el formato; False en caso contrario.
+    """
     patron = r"[A-Za-z0-9]+@[A-Za-z0-9._+-]{1,}\.(com|com\.ar)"
     return bool(re.fullmatch(patron, texto))
     

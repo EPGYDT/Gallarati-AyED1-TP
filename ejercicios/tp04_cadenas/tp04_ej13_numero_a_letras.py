@@ -10,6 +10,14 @@ la función si también aceptara números negativos? ¿Y números con decimales?
 
 
 def calcular_numero(numero):
+    """
+    Contrato:
+        - Separa un numero de hasta tres cifras en centenas, decenas y unidades.
+    Pre:
+        - Recibe un numero entero no negativo menor que 1000.
+    Post:
+        - Devuelve una tupla con las cifras de centenas, decenas y unidades.
+    """
     tres_cifras = 0
     dos_cifras = 0
     una_cifra = 0
@@ -28,6 +36,14 @@ def calcular_numero(numero):
     return tres_cifras, dos_cifras, una_cifra
 
 def numero_a_letras(numero):
+    """
+    Contrato:
+        - Convierte un numero entero en su expresion escrita en castellano.
+    Pre:
+        - Recibe un numero entero entre 0 y 1.000.000.000.000.
+    Post:
+        - Devuelve una cadena con el numero expresado en letras.
+    """
     mono = ("uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve")
     dieces = (
         "once",

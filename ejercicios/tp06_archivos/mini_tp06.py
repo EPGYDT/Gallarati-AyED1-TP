@@ -1,6 +1,14 @@
 import json
 
 def convertir_a_json(nombre_archivo: str):
+    """
+    Contrato:
+        - Convierte apellidos de personas en datos JSON segun su nacionalidad.
+    Pre:
+        - Recibe la ruta de un archivo de texto existente.
+    Post:
+        - Crea el archivo son.json con los datos agrupados por nacionalidad.
+    """
     salida = ""
     try:
         with open(nombre_archivo, "rt", encoding="utf-8") as archivo:

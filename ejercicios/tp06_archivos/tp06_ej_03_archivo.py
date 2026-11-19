@@ -7,6 +7,13 @@ que incluya las siguientes funciones:
 
 def grabar_rango_alturas():
     """
+    Contrato:
+        - Solicita deportistas y alturas y las graba por disciplina.
+    Pre:
+        - No requiere datos previos.
+    Post:
+        - Crea el archivo deportes.txt con las disciplinas y alturas ingresadas.
+
     Graba en un archivo las alturas de los atletas de distintas
     disciplinas, los que se ingresan desde el teclado. Cada dato se debe grabar en una
     línea distinta.
@@ -53,6 +60,13 @@ def grabar_rango_alturas():
 
 def grabar_promedio():
     """
+    Contrato:
+        - Calcula los promedios de altura por disciplina.
+    Pre:
+        - Existe el archivo deportes.txt generado por grabar_rango_alturas.
+    Post:
+        - Crea el archivo promedios.txt con las disciplinas y sus promedios.
+
     Graba en un archivo los promedios de las alturas de los atletas,
     leyendo los datos del archivo generado en el paso anterior. La disciplina y el
     promedio deben grabarse en líneas diferentes.
@@ -92,6 +106,15 @@ def grabar_promedio():
 
 
 def promedio_global():
+    """
+    Contrato:
+        - Calcula el promedio de todas las alturas registradas.
+    Pre:
+        - Existe el archivo deportes.txt generado por grabar_rango_alturas.
+    Post:
+        - Devuelve el promedio global de alturas.
+        - Devuelve 0 si no hay alturas validas.
+    """
     try:
         with open("deportes.txt", "rt", encoding="utf-8") as archivo:
             acumulador = 0
@@ -120,6 +143,14 @@ def promedio_global():
 
 
 def mostrar_mas_altos():
+    """
+    Contrato:
+        - Muestra las disciplinas y alturas superiores al promedio global.
+    Pre:
+        - Existe el archivo deportes.txt generado por grabar_rango_alturas.
+    Post:
+        - Imprime el promedio global y las alturas que lo superan.
+    """
     promedio = promedio_global()
 
     if promedio == 0:

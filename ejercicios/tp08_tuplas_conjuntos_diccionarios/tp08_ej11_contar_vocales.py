@@ -1,4 +1,12 @@
 def contarvocales(cadena: str):
+    """
+    Contrato:
+        - Cuenta las apariciones de cada vocal en una cadena.
+    Pre:
+        - Recibe una cadena de texto.
+    Post:
+        - Imprime las vocales presentes y su cantidad de apariciones.
+    """
     diccionario = dict()
     for letra in cadena.lower():
         if letra in "aeiou":

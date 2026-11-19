@@ -1,4 +1,12 @@
 def buscarclave(diccionario: dict, valor: int):
+    """
+    Contrato:
+        - Busca las claves asociadas a un valor.
+    Pre:
+        - Recibe un diccionario y un valor entero.
+    Post:
+        - Devuelve una lista con las claves cuyo valor coincide.
+    """
     claves = []
     for c, v in diccionario.items():
         if v == valor:
